@@ -1,6 +1,6 @@
 # CS510 CW 8
 
-**Author(s):** **CHANGEME**
+**Author(s):** **Maksym Solodovskyi & Chris Watkins**
 
 [![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-08-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-08-YOURNAME)
 
@@ -27,9 +27,7 @@ def julia(z):
 ```
 ## Assessment
 
-Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
-
-**CHANGEME**
+We found that exploring numba was the most useful part of this assignment. The implementation was definitely faster and it is good to know to speed up code.
 
 ## Honor Pledge
 
@@ -40,4 +38,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAME**
+**Maksym Solodovskyi & Chris Watkins**
