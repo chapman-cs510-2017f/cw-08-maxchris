@@ -8,12 +8,11 @@
 ###
 
 import csv
-import numba as nb
 import numpy as np
+import numba as nb
 import matplotlib.pyplot as plt
 from cplane_np import ArrayComplexPlane
 
-@nb.vectorize([nb.int32(nb.complex128)])
 def julia(c):
     """Builds function to store for use later.
     
@@ -23,7 +22,8 @@ def julia(c):
     Returns:
         f: Function
     """
-    def f(z, m = 100): 
+    @nb.vectorize([nb.int32(nb.complex128)])
+    def f(z): 
         """Function that takes a complex number and iterates 
            it until the condition abs(z) >=2 is reached.
         
@@ -51,7 +51,7 @@ def julia(c):
 class JuliaPlane(ArrayComplexPlane):
     def __init__(self,c):
         self.c = c
-        super(JuliaPlane,self).__init__(-2,2,3000,-2,2,3000)
+        super(JuliaPlane,self).__init__(-2,2,2000,-2,2,2000)
         self.plane = super(JuliaPlane,self).apply(julia(self.c))
 
     def refresh(self, c):
