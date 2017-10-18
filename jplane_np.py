@@ -4,14 +4,16 @@
 # Student ID: 2299101 & 1450263
 # Email:  solodovs@chapman.edu & watki115@mail.chapman.edu
 # Course: CS510 Fall 2017
-# Assignment: Classwork 7
+# Assignment: Classwork 8
 ###
 
 import csv
+import numba as nb
 import numpy as np
 import matplotlib.pyplot as plt
 from cplane_np import ArrayComplexPlane
 
+@nb.vectorize([nb.int32(nb.complex128)])
 def julia(c):
     """Builds function to store for use later.
     
@@ -66,7 +68,7 @@ class JuliaPlane(ArrayComplexPlane):
         
         self.fs = []
         super(JuliaPlane,self).__init__(self.xmin,self.xmax,self.xlen,self.ymin,self.ymax,self.ylen)
-        self.apply(np.vectorize(julia(self.c)))
+        self.apply(julia(self.c))
         return self.plane
 
     def apply(self, f):

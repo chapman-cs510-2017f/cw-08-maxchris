@@ -4,7 +4,7 @@
 # Student ID: 2299101 & 1450263
 # Email:  solodovs@chapman.edu & watki115@mail.chapman.edu
 # Course: CS510 Fall 2017
-# Assignment: Classwork 7
+# Assignment: Classwork 8
 ###
 
 import numpy as np
@@ -32,7 +32,7 @@ class ArrayComplexPlane(AbsComplexPlane):
         # The implementation type of plane is up to the user
         r = np.linspace(self.xmin, self.xmax,self.xlen)
         q = np.linspace(self.ymin, self.ymax, self.ylen)
-        x,y = np.meshgrid(r,q,)
+        x,y = np.meshgrid(r,q)
         self.plane = x+y*1j
         # fs should be a list of functions, initialized to be empty
         self.fs = []
