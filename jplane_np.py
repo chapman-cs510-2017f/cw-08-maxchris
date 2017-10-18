@@ -52,7 +52,7 @@ class JuliaPlane(ArrayComplexPlane):
     def __init__(self,c):
         self.c = c
         super(JuliaPlane,self).__init__(-2,2,3000,-2,2,3000)
-        self.plane = super(JuliaPlane,self).apply(np.vectorize(julia(self.c)))
+        self.plane = super(JuliaPlane,self).apply(julia(self.c))
 
     def refresh(self, c):
         """Regenerate Julia plane.
