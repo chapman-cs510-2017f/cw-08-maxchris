@@ -27,7 +27,7 @@ def julia(z):
 ```
 ## Assessment
 
-We found that exploring numba was the most useful part of this assignment. The implementation was definitely faster and it is good to know to speed up code.
+We found that exploring numba was the most useful part of this assignment. The implementation was definitely faster and it is good to know to speed up code. Also the Julia slides were very helpful in learning Julia.
 
 ## Honor Pledge
 
